@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/toobar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/teal_700"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+    tools:ignore="MissingClass">
+
+</androidx.appcompat.widget.Toolbar>

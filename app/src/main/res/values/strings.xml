@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">aplicativo_jogo</string>
+    <string name="produtora_do_jogo">produtora do jogo</string>
+    <string name="nome_do_jogo">nome do jogo</string>
+    <string name="console">Console:</string>
+    <string name="nota_do_jogo">Nota do jogo</string>
+
+
+
+    <string-array name="console">
+
+        <item> SELECIONAR </item>
+        <item> Mega Drive</item>
+        <item> Jaguar </item>
+        <item> Super Mario </item>
+
+    </string-array>
+
+
+</resources>

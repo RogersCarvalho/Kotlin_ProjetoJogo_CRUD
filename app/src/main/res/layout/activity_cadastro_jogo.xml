@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsuarioInterface.CadastroJogoActivity">
+
+
+    <include layout="@layout/toobar"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rlFotoDoJogo"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:background="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toobar"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageViewFotoDoJogo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/teal_200"
+            android:src="@drawable/ic_foto"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+            android:id="@+id/button_abrirGaleria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/purple_200"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_foto"
+            />
+
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlFotoDoJogo"
+        android:padding="16dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_NomeDoJogo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <EditText
+                android:id="@+id/edittext_NomeDoJogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:hint="@string/nome_do_jogo"
+                android:layout_margin="16dp"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_ProdutoraJogo"
+            android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/black"
+           app:layout_constraintTop_toBottomOf="@id/til_NomeDoJogo">
+
+            <EditText
+                android:id="@+id/edit_text_ProdutoraDoJogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:hint="@string/produtora_do_jogo"
+
+                android:layout_margin="16dp"
+                android:inputType="textCapWords" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/textview_console"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/console"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_ProdutoraJogo"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:id="@+id/spinerconsole"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/textview_console"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="8dp"
+            android:entries="@array/console"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+
+            />
+
+        <TextView
+            android:id="@+id/textview_NotaDoJogo"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/nota_do_jogo"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinerconsole"
+            android:background="@color/white"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            />
+
+         <RatingBar
+             android:id="@+id/ratinBarNotaJogo"
+             android:layout_width="wrap_content"
+             android:layout_height="50dp"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/textview_NotaDoJogo"
+             android:layout_marginTop="8dp"
+             android:isIndicator="false"
+             android:numStars="5"
+             android:rating="3.5"
+             android:stepSize="0.5"
+             style="?android:attr/ratingBarStyleIndicator"
+             />
+
+         <CheckBox
+             android:id="@+id/checkbox_zerado"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="zerado"
+             android:textSize="18dp"
+             app:layout_constraintBottom_toBottomOf="@id/ratinBarNotaJogo"
+             app:layout_constraintLeft_toLeftOf="parent">
+
+         </CheckBox>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
